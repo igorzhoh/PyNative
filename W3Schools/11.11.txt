@@ -1,0 +1,498 @@
+             #Syntax
+
+# Exercise
+
+a = 18
+b = 36
+c = 42
+O = 86
+print(a + c)
+print(O * c)
+
+if O > b:
+ print("Fine")
+
+
+
+# Exercise
+ 
+ 
+print("Just a text", end=" ")
+print("set for printing", end=" ")
+print("so you can read it")
+
+
+# Exercise
+
+name = "Ihor"
+print(f"Hello, {name}! Nice to see you in the Python world.")
+
+
+
+
+# Exercise
+
+length = 17
+width = 9
+G = length * width
+
+print(f"The room has length {length} and width {width}, the area is equal to {G}.")
+
+
+
+
+
+
+
+
+                  #Output / Text / Numbers
+
+
+print("Today is November",3,",",2025, ", closer to noon.")
+
+#More grammatical
+
+month = "November"
+day = 3
+year = 2025
+print(f"Today is {month} {day}, {year}, closer to noon.")
+
+
+
+
+
+
+
+
+
+                  #Variables
+
+# Exercise
+
+name = "Ihor"
+print("Hello, " + name + "!")
+
+
+# Exercise
+
+x = 11
+y = 46
+
+print("Addition:", x + y)
+print("Subtraction:", x - y)
+print("Multiplication:", x * y)
+print("Division:", x / y)
+
+
+
+           Global Variables
+
+# Exercise
+
+
+x = 101  # global 
+
+def show():
+    x = 55  # local
+    print("Inside function:", x)
+
+show()
+print("Outside function:", x)
+
+
+# Exercise
+
+
+counter = 0  # global variables
+
+def increase():
+    global counter  # change global
+    counter += 1
+    print("Inside function:", counter)
+
+increase()
+increase()
+increase()
+print("Outside function:", counter)
+
+
+# Exercise
+
+
+a = 100  # global
+
+def function():
+    b = 50  # локальна
+    print("Inside function:")
+    print("a =", a)  # global
+    print("b =", b)  # local
+
+function()
+print("Outside function:")
+print("a =", a)
+
+# Exercise
+
+total = 0  # global
+
+def add(a, b):
+    result = a + b  # local
+    global total
+    total += result  # змінюємо глобальну
+    print("Result inside function:", result)
+    print("Total so far:", total)
+
+add(2, 3)
+add(4, 5)
+print("Final total:", total)
+
+
+
+                       # Data Type
+
+
+
+# Exercise
+
+name = "Dmitry"        # str
+age = 21               # int
+height = 1.80          # float
+is_student = True      # bool
+
+print("name:", name, type(name))
+print("age:", age, type(age))
+print("height:", height, type(height))
+print("student:", is_student, type(is_student))
+
+
+
+# Exercise
+
+
+# int і float
+age = 19
+average_grade = 87.5
+print("Student Age:", age)
+print("Average score:", average_grade)
+print("Score after increase:", average_grade + 5.5)
+print()
+
+# complex
+z = 3 + 2j
+print("Complex number:", z)
+print("Real part:", z.real)
+print("Imaginary part:", z.imag)
+print()
+
+# str
+name = "Dmitry"
+city = "Lviv"
+print("Name:", name)
+print("City:", city)
+print("Name in upper letters:", name.upper())
+print("Q-ty letters 'i' in name:", name.count("i"))
+print()
+
+# list
+grades = [90, 85, 100, 78] # Список оцінок
+print("Grades:", grades)
+print("First:", grades[0])
+print("Last:", grades[-1])
+grades.append(95)
+print("After adding a new rating:", grades) # Після додавання нової оцінки
+grades.remove(85)
+print("After deleting the rating:", grades) # Після видалення оцінки
+print()
+
+
+# set (унікальні предмети)
+subjects = {"Math", "Python", "History", "Math"}
+print("Subjects:", subjects)
+subjects.add("English")
+print("After adding a new subject:", subjects)
+print()
+
+
+# bool
+is_adult = age >= 18
+print("Is the student an adult?", is_adult)
+
+
+
+
+
+
+            # Numbers
+
+
+# Exercise
+
+
+# Numeric types
+a = 5                # integer
+b = 3.7              # float
+c = 2 + 4j           # complex number
+
+# Convert between numeric types
+to_float = float(a)      # convert int -> float
+to_int = int(b)          # convert float -> int (drops decimal part)
+to_complex = complex(a)  # convert int -> complex (imaginary part = 0)
+
+print("a (int) =", a, "-> to_float (float) =", to_float)
+print("b (float) =", b, "-> to_int (int) =", to_int)
+print("a (int) =", a, "-> to_complex (complex) =", to_complex)
+print()
+
+
+
+# Strings and numeric conversions
+
+num_str = str(a)         # convert int -> str
+float_str = str(b)       # convert float -> str
+complex_str = str(c)     # complex -> str (string representation)
+
+text = "123"
+int_from_str = int(text)     # "123" -> 123 (int)
+float_from_str = float(text) # "123" -> 123.0 (float)
+
+print("num_str:", num_str, "type:", type(num_str))
+print("int_from_str:", int_from_str, "type:", type(int_from_str))
+print("float_from_str:", float_from_str, "type:", type(float_from_str))
+print()
+
+
+# Boolean conversions
+
+x = 0
+y = 5
+bool_x = bool(x)   # 0 -> False
+bool_y = bool(y)   # non-zero -> True
+bool_empty = bool("")  # empty string -> False
+bool_nonempty = bool("hello") # non-empty string -> True
+
+
+print("bool(0) =", bool_x)
+print("bool(5) =", bool_y)
+print("bool('') =", bool_empty)
+print("bool('hello') =", bool_nonempty)
+print()
+
+
+
+# Collections: list, tuple, set
+numbers = [1, 2, 3]              # list
+numbers_tuple = tuple(numbers)   # list -> tuple
+numbers_set = set(numbers)       # list -> set (unique values)
+
+
+print("list:", numbers, type(numbers))
+print("tuple:", numbers_tuple, type(numbers_tuple))
+print("set:", numbers_set, type(numbers_set))
+print()
+
+
+# Dictionary keys/values -> lists
+student = {"name": "Ihor", "age": 19, "city": "Kyiv"}
+
+keys_list = list(student.keys())     # dict_keys -> list
+values_list = list(student.values()) # dict_values -> list
+items_list = list(student.items())   # dict_items -> list of tuples
+
+
+print("keys_list:", keys_list)
+print("values_list:", values_list)
+print("items_list:", items_list)
+print()
+
+
+
+
+
+
+                        # Сasting
+
+
+
+# Task 1
+# Create variables
+a = "25"     # str
+b = 3.8      # float
+c = 0        # int
+
+# Convert (casting)
+a_int = int(a)        # str -> int
+b_int = int(b)        # float -> int
+c_bool = bool(c)      # int -> bool
+
+print("a_int:", a_int, "type:", type(a_int))
+print("b_int:", b_int, "type:", type(b_int))
+print("c_bool:", c_bool, "type:", type(c_bool))
+
+
+# Task 2
+x = "10"     # str
+y = "3.5"    # str
+z = "True"   # str
+
+# Convert types
+x_int = int(x)           # str -> int
+y_float = float(y)       # str -> float
+z_bool = bool(z)         # str -> bool (any non-empty string is True)
+
+# Perform operations
+sum_result = x_int + y_float     # int + float
+print("Sum:", sum_result)
+
+print("x_int type:", type(x_int))
+print("y_float type:", type(y_float))
+print("z_bool value:", z_bool)
+
+
+
+
+
+                  # Strings
+
+
+# Task: String slicing
+
+sentence = "Python programming is fun!"
+
+# Slice the first word
+part1 = sentence[0:6]          # from 0 to 5
+print("Word 1:", part1)
+
+# Slice the second word
+part2 = sentence[7:18]         # from 7 to 17
+print("Word 2:", part2)
+
+# Last word
+part3 = sentence[-4:]          # last 4 simbols
+print("Last word:", part3)
+
+# Every second character
+every_second = sentence[::2]   # step = 2
+print("Every 2nd char:", every_second)
+
+# Reverse the sentence
+reversed_sentence = sentence[::-1]
+print("Reversed:", reversed_sentence)
+
+
+
+
+# Format - Strings
+
+
+
+# Upper Case / Lower Case / Remove Whitespace / Replace String / Split String
+
+text = "hello world"
+upper_text = text.upper()
+print(upper_text)  # "HELLO WORLD"
+
+
+
+text = "PYTHON"
+lower_text = text.lower()
+print(lower_text)  # "python"
+
+
+
+text = "   data science   "
+clean_text = text.strip()
+print(clean_text)  # "data science"
+
+
+
+text = "Good morning"
+new_text = text.replace("morning", "evening")
+print(new_text)  # "Good evening"
+
+
+
+text = "Python is fun"
+words = text.split()
+print(words)  # ['Python', 'is', 'fun']
+
+
+
+
+
+#Escape Characters
+
+
+# Task:
+
+#"Once upon a time," she said, "there was a coder named Dmitry."
+#	He would often say:
+#		'Python makes programming fun!'
+#End of story.
+
+
+story = "\"Once upon a time,\" she said, \"there was a coder named Dmitry.\"\n" \
+        "\tHe would often say:\n" \
+        "\t\t'Python makes programming fun!'\n" \
+        "End of story."
+
+print(story)
+
+
+
+
+
+
+            #Booleans
+
+# Task 
+
+a = 5
+b = 0
+
+print("a =", a, "->", bool(a))  # True
+print("b =", b, "->", bool(b))  # False
+
+
+# Task
+
+x = 10
+y = 3
+
+print("x > y:", x > y)          # True, 10 > 3
+print("x == y:", x == y)        # False, 10 ≠ 3
+print("x < y or x == 10:", x < y or x == 10)  # True, бо друга умова істинна
+print("x < y and x == 10:", x < y and x == 10) # False, бо перша хибна
+
+
+# Task:
+#Напиши програму, яка:
+#Запитує в користувача число.
+#Перевіряє, чи це додатне число.
+#Перевіряє, чи воно ціле (int).
+#Виводить True або False для кожної перевірки.
+
+num = 5.0
+
+is_positive = num > 0
+is_integer = isinstance(num, int)
+
+print("Is positive?", is_positive)
+print("Is integer?", is_integer)
+
+
+# Task:
+
+a = "Python"
+b = 123
+c = [1, 2, 3]
+d = 4.5
+
+# Твоя задача:
+# перевір кожну змінну з допомогою isinstance() і виведи результат
+
+print(isinstance(a, str)) 	#True
+print(isinstance(b, int)) 	#True
+print(isinstance(c, list)) 	#True
+print(isinstance(d, float))	#True
+
+
