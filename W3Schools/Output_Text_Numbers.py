@@ -1,5 +1,3 @@
-#Python Output / Text / Numbers
-
 print("Today is November",3,",",2025, ", closer to noon.")
 
 #More grammatical
