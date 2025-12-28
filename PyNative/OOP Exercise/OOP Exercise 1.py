@@ -13,6 +13,21 @@ print(car.max_speed)
 print(car.mileage)
 
 
+
+#OOP Exercise 1.1
+
+
+# class Vehicle:
+#
+#     def __init__(self, max_speed1, mileage1):
+#         self.max_speed = max_speed1
+#         self.mileage = mileage1
+#
+# car = Vehicle(210, 50)
+# print("max_speed", car.max_speed, ',', "mileage", car.mileage)
+
+
+
 # class Vehicle:
 #     def __init__(self):
 #         self.max_speed = 0
